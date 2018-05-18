@@ -1,4 +1,4 @@
-# TriZN-Profile
+# TriZN-Portfolio
 Xin chào!
 
 Xin giới thiệu đây là ứng dụng "TriZN-Profile", một ứng dụng cơ bản và đơn giản được viết bằng ngôn ngữ "Swift". Ứng dụng này viết ra chủ yếu để giới thiệu về bản thân cũng như thông tin liên lạc.
