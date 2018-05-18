@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Education</key>
+	<dict>
+		<key>Education 1</key>
+		<array>
+			<string>Oct 2009 - Nov 2012: Cao Thang Technical College (bachelor IT)</string>
+		</array>
+	</dict>
+	<key>Skills</key>
+	<dict>
+		<key>Programming Skills</key>
+		<array>
+			<string>PHP,  MySQL, HTML.</string>
+			<string>Swift, XCode.</string>
+		</array>
+		<key>Soft Skills</key>
+		<array>
+			<string>Team work</string>
+			<string>Learning skills</string>
+			<string>Problem solving</string>
+		</array>
+	</dict>
+	<key>Experience Record</key>
+	<dict>
+		<key>Experience 1</key>
+		<array>
+			<string>I have 3 years experience in IT, Projectors, English lab room, Display Wall.. In the same time I work and study HTML, PHP and Swift..</string>
+		</array>
+		<key>Experience 2</key>
+		<array>
+			<string>From Jun 2014 - present: Khai Quoc Trading &amp; Technology Development Company Limited</string>
+			<string>Making and develop Display Wall, Online Meeting, Lab Room.</string>
+		</array>
+		<key>Experience 3</key>
+		<array>
+			<string>From August 2013 - Jun 2014: Hoang Phat Mobile Phone Company Limite</string>
+			<string>Customer service, technical assostance about Mobile Application and Laptop</string>
+		</array>
+	</dict>
+	<key>Interests</key>
+	<dict>
+		<key>Interests 1</key>
+		<array>
+			<string>Football/Soccer, Cinema, Listening to Music, etc....</string>
+		</array>
+	</dict>
+</dict>
+</plist>

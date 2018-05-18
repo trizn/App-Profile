@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PX4-uL-D3Y">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="5r2-nu-YI0">
+            <objects>
+                <viewController storyboardIdentifier="IdentifyLoginViewController" id="qze-dF-6l9" customClass="LoginViewController" customModule="TriZN_Profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wnI-i0-B7k"/>
+                        <viewControllerLayoutGuide type="bottom" id="ogg-4h-gjs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="daX-Ea-g2e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Login" translatesAutoresizingMaskIntoConstraints="NO" id="sbX-Ay-7WW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWr-u2-RXB">
+                                <rect key="frame" x="50" y="648" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.015686274509803921" green="0.61960784313725492" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VOi-8Q-fn5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Login with Flickr">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="lD4-IS-ekI" kind="show" id="bFZ-Rx-Xi8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ogg-4h-gjs" firstAttribute="top" secondItem="IWr-u2-RXB" secondAttribute="bottom" constant="80" id="143-2k-USJ"/>
+                            <constraint firstItem="IWr-u2-RXB" firstAttribute="centerX" secondItem="daX-Ea-g2e" secondAttribute="centerX" id="5F3-fS-39y"/>
+                            <constraint firstItem="sbX-Ay-7WW" firstAttribute="top" secondItem="daX-Ea-g2e" secondAttribute="top" id="7ke-iN-Dq8"/>
+                            <constraint firstAttribute="trailing" secondItem="sbX-Ay-7WW" secondAttribute="trailing" id="BsX-37-zTj"/>
+                            <constraint firstAttribute="trailing" secondItem="IWr-u2-RXB" secondAttribute="trailing" constant="50" id="C3w-dh-d70"/>
+                            <constraint firstItem="IWr-u2-RXB" firstAttribute="leading" secondItem="daX-Ea-g2e" secondAttribute="leading" constant="50" id="IFO-BX-dqo"/>
+                            <constraint firstItem="sbX-Ay-7WW" firstAttribute="leading" secondItem="daX-Ea-g2e" secondAttribute="leading" id="eSf-A8-m6A"/>
+                            <constraint firstItem="ogg-4h-gjs" firstAttribute="top" secondItem="sbX-Ay-7WW" secondAttribute="bottom" id="gs1-cH-Gp3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hdD-CI-H4Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4e3-9g-o6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981.60000000000002" y="1237.3313343328336"/>
+        </scene>
+        <!--Authentication-->
+        <scene sceneID="QrZ-Hb-TDu">
+            <objects>
+                <viewController storyboardIdentifier="Auth" id="lD4-IS-ekI" customClass="AuthenticationViewController" customModule="TriZN_Profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A6D-Hp-T0w"/>
+                        <viewControllerLayoutGuide type="bottom" id="bfN-R4-duZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uYI-VT-VSc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVa-PI-bIh">
+                                <rect key="frame" x="16" y="44" width="343" height="734"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="lD4-IS-ekI" id="zKb-xc-8qH"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="YVa-PI-bIh" secondAttribute="trailing" id="6kf-JB-mdO"/>
+                            <constraint firstItem="YVa-PI-bIh" firstAttribute="leading" secondItem="uYI-VT-VSc" secondAttribute="leadingMargin" id="FQo-FN-cI3"/>
+                            <constraint firstItem="bfN-R4-duZ" firstAttribute="top" secondItem="YVa-PI-bIh" secondAttribute="bottom" id="JF7-pB-Ayx"/>
+                            <constraint firstItem="YVa-PI-bIh" firstAttribute="top" secondItem="A6D-Hp-T0w" secondAttribute="bottom" id="qlA-mv-OEb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Authentication" id="KTt-hg-WtO"/>
+                    <connections>
+                        <outlet property="loginWebView" destination="YVa-PI-bIh" id="Ike-oZ-PX3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ejn-Uv-eNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="1237"/>
+        </scene>
+        <!--Skill View Controller-->
+        <scene sceneID="osu-BZ-bgZ">
+            <objects>
+                <viewController id="XMu-31-rOL" customClass="SkillViewController" customModule="TriZN_Profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="awc-Pv-63k"/>
+                        <viewControllerLayoutGuide type="bottom" id="zSf-Zd-Hbk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GZi-K7-Vtt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bDX-As-r11"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0B-fu-Og3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="1984"/>
+        </scene>
+        <!--Image Preview View Controller-->
+        <scene sceneID="H6e-op-QeU">
+            <objects>
+                <viewController storyboardIdentifier="Preview" id="BVB-1f-iMH" customClass="ImagePreviewViewController" customModule="TriZN_Profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xju-Lt-kAM"/>
+                        <viewControllerLayoutGuide type="bottom" id="JAZ-Gj-VAr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bT4-Ye-qMU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ui-fA-yDc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6St-76-8Nu">
+                                <rect key="frame" x="177" y="335" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6St-76-8Nu" firstAttribute="centerX" secondItem="7Ui-fA-yDc" secondAttribute="centerX" id="KAt-hd-lMZ"/>
+                            <constraint firstItem="6St-76-8Nu" firstAttribute="centerY" secondItem="7Ui-fA-yDc" secondAttribute="centerY" id="MC5-cD-DMa"/>
+                            <constraint firstItem="7Ui-fA-yDc" firstAttribute="top" secondItem="xju-Lt-kAM" secondAttribute="bottom" id="Neg-vO-WNH"/>
+                            <constraint firstItem="7Ui-fA-yDc" firstAttribute="leading" secondItem="bT4-Ye-qMU" secondAttribute="leading" id="fuQ-zV-iMs"/>
+                            <constraint firstItem="JAZ-Gj-VAr" firstAttribute="top" secondItem="7Ui-fA-yDc" secondAttribute="bottom" id="taq-zG-Yei"/>
+                            <constraint firstAttribute="trailing" secondItem="7Ui-fA-yDc" secondAttribute="trailing" id="vr2-Tr-FQl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="blf-26-nB6"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="6St-76-8Nu" id="Q03-0K-05u"/>
+                        <outlet property="imageView" destination="7Ui-fA-yDc" id="UQ2-IY-urW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3el-YZ-HAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1054" y="1929"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="dSL-m2-XIn">
+            <objects>
+                <viewController storyboardIdentifier="IdentifyGalleryViewController" id="X0y-E2-BAo" customClass="GalleryViewController" customModule="TriZN_Profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mi6-jc-RjI"/>
+                        <viewControllerLayoutGuide type="bottom" id="yIw-bM-EcJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ckw-WZ-9dd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rky-Ub-APR">
+                                <rect key="frame" x="166" y="309" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uwd-SB-zEg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="0.0" id="Ro3-LJ-hE4">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WRL-Vq-lJ0" customClass="GalleryCell" customModule="TriZN_Profile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="X0y-E2-BAo" id="Sk6-pw-7Ln"/>
+                                    <outlet property="delegate" destination="X0y-E2-BAo" id="mo0-aG-ntO"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uwd-SB-zEg" firstAttribute="leading" secondItem="Ckw-WZ-9dd" secondAttribute="leading" id="37Z-Cf-99F"/>
+                            <constraint firstAttribute="trailing" secondItem="Uwd-SB-zEg" secondAttribute="trailing" id="Una-1I-okp"/>
+                            <constraint firstItem="Uwd-SB-zEg" firstAttribute="top" secondItem="mi6-jc-RjI" secondAttribute="bottom" id="Xup-Gn-fNe"/>
+                            <constraint firstItem="yIw-bM-EcJ" firstAttribute="top" secondItem="Uwd-SB-zEg" secondAttribute="bottom" id="YOb-kf-LKT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ky8-5l-MB7"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Uwd-SB-zEg" id="2bc-zA-NqN"/>
+                        <segue destination="BVB-1f-iMH" kind="push" identifier="Gallery_ImagePreview" id="Ehk-t0-R8U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGo-h4-RT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.399999999999999" y="1928.5714285714287"/>
+        </scene>
+        <!--Skill-->
+        <scene sceneID="FX0-pA-fNP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PX4-uL-D3Y" customClass="SkillNavigationController" customModule="TriZN_Profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="Skill" image="Skill" id="BQ0-y5-5Xe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="yoJ-lo-wP9">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.015686274510000001" green="0.61960784310000006" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5tY-J1-T4o">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="X0y-E2-BAo" kind="relationship" relationship="rootViewController" id="aIc-9R-ql4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1b0-gS-Wc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="1237"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background_Login" width="474" height="714"/>
+        <image name="Skill" width="25" height="25"/>
+    </resources>
+</document>

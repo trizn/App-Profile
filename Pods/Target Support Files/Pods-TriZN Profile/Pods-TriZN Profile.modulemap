@@ -1,0 +1,6 @@
+framework module Pods_TriZN_Profile {
+  umbrella header "Pods-TriZN Profile-umbrella.h"
+
+  export *
+  module * { export * }
+}
