@@ -25,9 +25,9 @@
 		4DB023BB207CEF7400F0C70B /* PhotoServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB023BA207CEF7400F0C70B /* PhotoServices.swift */; };
 		4DBDE08B20988AAC00BD0E80 /* PhotosEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE08920988AAC00BD0E80 /* PhotosEntity+CoreDataClass.swift */; };
 		4DBDE08C20988AAC00BD0E80 /* PhotosEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDE08A20988AAC00BD0E80 /* PhotosEntity+CoreDataProperties.swift */; };
-		4DD1B3AD20689B2B001EF107 /* SkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD1B3AC20689B2B001EF107 /* SkillViewController.swift */; };
 		4DD1B3B22068A7E7001EF107 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD1B3B02068A7E7001EF107 /* GalleryCell.swift */; };
 		4DD1B3B32068A7E7001EF107 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DD1B3B12068A7E7001EF107 /* GalleryCell.xib */; };
+		4DD1C25C20B2A4F000E10723 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD1C25B20B2A4F000E10723 /* Login.storyboard */; };
 		4DE1AAC92049935400E2A3BA /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1AAC82049935400E2A3BA /* UIImageView.swift */; };
 		4DE1AACC20499DB600E2A3BA /* ConstantsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1AACB20499DB600E2A3BA /* ConstantsApp.swift */; };
 		4DE1AACF20499E7400E2A3BA /* ScaleScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1AACE20499E7400E2A3BA /* ScaleScreenHelper.swift */; };
@@ -72,9 +72,9 @@
 		4DB023BA207CEF7400F0C70B /* PhotoServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoServices.swift; sourceTree = "<group>"; };
 		4DBDE08920988AAC00BD0E80 /* PhotosEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotosEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4DBDE08A20988AAC00BD0E80 /* PhotosEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotosEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4DD1B3AC20689B2B001EF107 /* SkillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillViewController.swift; sourceTree = "<group>"; };
 		4DD1B3B02068A7E7001EF107 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		4DD1B3B12068A7E7001EF107 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
+		4DD1C25B20B2A4F000E10723 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4DE1AAC82049935400E2A3BA /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		4DE1AACB20499DB600E2A3BA /* ConstantsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApp.swift; sourceTree = "<group>"; };
 		4DE1AACE20499E7400E2A3BA /* ScaleScreenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleScreenHelper.swift; sourceTree = "<group>"; };
@@ -243,6 +243,7 @@
 		4DB0BD02204D881700A2C6BB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4DD1C25D20B2B08F00E10723 /* Login */,
 				4D4CFD5820A2CE60002C0982 /* About */,
 				4DF09E282074817C00432CEB /* TabbarController */,
 				4DF09E212073C4F800432CEB /* Skill */,
@@ -266,6 +267,15 @@
 				4DB023BA207CEF7400F0C70B /* PhotoServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4DD1C25D20B2B08F00E10723 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4DF09E222073C51400432CEB /* LoginViewController.swift */,
+				4DF09E242073F13100432CEB /* AuthenticationViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		4DE1AAC72049930C00E2A3BA /* Extensions */ = {
@@ -304,6 +314,7 @@
 				4DE6F48F2063F47E008AC1FD /* About.storyboard */,
 				4DE6F48D2063F3CD008AC1FD /* Skill.storyboard */,
 				4DE6F48B2063F093008AC1FD /* Information.storyboard */,
+				4DD1C25B20B2A4F000E10723 /* Login.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -337,10 +348,7 @@
 		4DF09E212073C4F800432CEB /* Skill */ = {
 			isa = PBXGroup;
 			children = (
-				4DD1B3AC20689B2B001EF107 /* SkillViewController.swift */,
-				4DF09E222073C51400432CEB /* LoginViewController.swift */,
 				4DA35ED82087299400B37851 /* ImagePreviewViewController.swift */,
-				4DF09E242073F13100432CEB /* AuthenticationViewController.swift */,
 				4DF09E262073F3B600432CEB /* GalleryViewController.swift */,
 				4DF09E2B2074833100432CEB /* SkillNavigationController.swift */,
 			);
@@ -433,6 +441,7 @@
 				4DFB93CC20A6FB0800101D2D /* AboutCell.xib in Resources */,
 				4D49503C2042CF820000F939 /* Assets.xcassets in Resources */,
 				4DD1B3B32068A7E7001EF107 /* GalleryCell.xib in Resources */,
+				4DD1C25C20B2A4F000E10723 /* Login.storyboard in Resources */,
 				4DE6F48A2063F043008AC1FD /* Main.storyboard in Resources */,
 				4DE6F48C2063F093008AC1FD /* Information.storyboard in Resources */,
 				4D4CFD6620A3DD05002C0982 /* About.plist in Resources */,
@@ -506,7 +515,6 @@
 			files = (
 				4DF09E232073C51400432CEB /* LoginViewController.swift in Sources */,
 				4DA4E22A206671EB0034C2FF /* AvatarTableViewCell.swift in Sources */,
-				4DD1B3AD20689B2B001EF107 /* SkillViewController.swift in Sources */,
 				4D64AE5D2083A62D00F45571 /* PaginationHelper.swift in Sources */,
 				4DE1AACC20499DB600E2A3BA /* ConstantsApp.swift in Sources */,
 				4DBDE08B20988AAC00BD0E80 /* PhotosEntity+CoreDataClass.swift in Sources */,

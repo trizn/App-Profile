@@ -42,7 +42,7 @@ class User: NSObject {
     }
     
     //Sets User data to singleton object
-    func getProfileInfo(userName: String?, fullName: String?, userId: String?) {
+    func setProfileInfo(userName: String?, fullName: String?, userId: String?) {
         self.userName = userName
         self.name = fullName
         self.userId = userId

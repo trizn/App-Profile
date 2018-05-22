@@ -13,11 +13,12 @@ class SkillNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if(User.share().accessToken == nil) {
-            if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "IdentifyLoginViewController") {
-                setViewControllers([loginVC], animated: true)
-            }
-        }
+//        if(User.share().accessToken == nil) {
+//            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+//            let loginVC = storyboard.instantiateViewController(withIdentifier: "IdentifyLoginViewController")
+//            navigationController?.pushViewController(loginVC, animated: true)
+//
+//        }
     }
 
 }

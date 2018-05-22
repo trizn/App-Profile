@@ -19,6 +19,8 @@ class AuthenticationViewController: UIViewController {
     // MARK: View cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,12 +29,8 @@ class AuthenticationViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        ////         Check User authenticated
-        helperFlickr?.login(sender: self, { (error) in
-                            print(error?.localizedDescription ?? "")
-                        })
+        
     }
-    
     
     // MARK: - Private Methods
 
@@ -76,14 +74,24 @@ extension AuthenticationViewController: UIWebViewDelegate {
             if let token = url {
                 User.share().saveAccessToken(url: token)
                 
-                let storyboad = UIStoryboard.init(name: "Skill", bundle: nil)
-                let galleryVC = storyboad.instantiateViewController(withIdentifier: "IdentifyGalleryViewController")
-                self.navigationController?.setViewControllers([galleryVC], animated: true)
-                
+//                let storyboad = UIStoryboard(name: "Skill", bundle: nil)
+//                let galleryVC = storyboad.instantiateViewController(withIdentifier: "IdentifyGalleryViewController")
+//                self.navigationController?.setViewControllers([galleryVC], animated: true)
+
                 self.helperFlickr = FlickrHelper()
-                self.helperFlickr?.checkAuthentication(callbackURL: token, sender: self, { () -> Void? in
-                    _ = self.navigationController?.popViewController(animated: true)
+                self.helperFlickr?.checkAuthentication(callbackURL: token, sender: self, { (error) in
+                    // Push to Gallery View Controller
+                    if error == nil {
+                                        let storyboad = UIStoryboard(name: "Skill", bundle: nil)
+                                        let galleryVC = storyboad.instantiateViewController(withIdentifier: "IdentifyGalleryViewController")
+                                        self.navigationController?.setViewControllers([galleryVC], animated: true)
+//                        _ = self.navigationController?.popViewController(animated: true)
+                    } else {
+                        print("ashdjkas")
+                    }
+       
                 })
+                
             } else if url?.absoluteString == "https://m.flickr.com/#/home" {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
                     _ = self.navigationController?.popToRootViewController(animated: true)

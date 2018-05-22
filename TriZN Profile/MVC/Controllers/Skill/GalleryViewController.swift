@@ -24,6 +24,7 @@ class GalleryViewController: UIViewController {
     private var _pages: Int?
     private var _isRefresh: Bool = false
     private var _imagePicker : UIImage?
+    private var _isLogin: Bool = false
     
     // Properties Core Data
     private var _photoCoreData: [NSManagedObject] = []
@@ -37,47 +38,57 @@ class GalleryViewController: UIViewController {
     // MARK: - View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         _photos = [Photo]()
         
         // Pull down Refresher
-        refreshControl.attributedTitle = NSAttributedString.init(string: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         self.collectionView.addSubview(refreshControl)
         
         
         // Register Cell
-        collectionView.register(UINib.init(nibName: "GalleryCell", bundle: nil), forCellWithReuseIdentifier: "GalleryCell")
+        collectionView.register(UINib(nibName: "GalleryCell", bundle: nil), forCellWithReuseIdentifier: "GalleryCell")
         
-        if (User.share().accessToken == nil ) {
-            popToLoginViewController()
-            return
-        }
+//        if (User.share().accessToken == nil ) {
+//            popToLoginViewController()
+//            return
+//        }
         
         // UIImagePicker: set delegate
         imagePickerController.delegate = self
         
+        if let name = User.share().name {
+            navigationItem.title = "Welcome \(name)"
+        }
+        
+        // Fetch images from Flickr
         fetchImages()
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         navigationController?.navigationBar.isHidden = false
         navigationItem.hidesBackButton = true
-        
+
         // Show item logout in navagation when user authented
-        configureNavigationItem()
-
+        DispatchQueue.main.async(execute: {
+            if User.share().accessToken != nil {
+                self.configureNavigationItem()
+            }
+            
+        })
     }
-    
-
     
     // MARK: - Private function
     private func configureNavigationItem() {
         
         // Add a item in navigation
-        DispatchQueue.main.async(execute: {
+//        DispatchQueue.main.async(execute: {
                 if User.share().accessToken != nil {
+                    
                     let rightButtonItem = UIBarButtonItem(image: UIImage(named: "icon_logout.png"),
                                                           style: .plain,
                                                           target: self,
@@ -92,7 +103,7 @@ class GalleryViewController: UIViewController {
                 self.navigationController?.navigationBar.topItem?.rightBarButtonItem = rightButtonItem
                 self.navigationController?.navigationBar.topItem?.leftBarButtonItem = leftButtonItem
             }
-        })
+//        })
         
     }
     
@@ -135,7 +146,7 @@ class GalleryViewController: UIViewController {
                 }
                 
                 self.collectionView.reloadData()
-
+ 
                 self.refreshControl.endRefreshing()
                 
             } else {
@@ -196,6 +207,7 @@ class GalleryViewController: UIViewController {
         alert.addAction(yesButton)
         self.present(alert, animated: true, completion: nil)
         
+
     }
     
     /**
@@ -208,7 +220,7 @@ class GalleryViewController: UIViewController {
     }
     
     func popToLoginViewController() {
-        let storyboad = UIStoryboard.init(name: "Skill", bundle: nil)
+        let storyboad = UIStoryboard(name: "Login", bundle: nil)
         let loginVC = storyboad.instantiateViewController(withIdentifier: "IdentifyLoginViewController")
         self.navigationController?.setViewControllers([loginVC], animated: true)
         

@@ -18,9 +18,6 @@ class PhotoServices: NSObject {
     class func peopleGetPhotos(viewController: UIViewController , page: Int = 1, completionHandler: @escaping (_ photos: [String: Any]?, _ photoURLs: [Photo?]?, _ error: NSError?)->Void) {
         var photoURLs = [Photo?]()
         
-        // Get data from CoreData
-        var photosCoreData: [Photo] = []
-        
         let flickrPeopleGetPhotos = FKFlickrPeopleGetPhotos()
         flickrPeopleGetPhotos.user_id = User.share().userId
         flickrPeopleGetPhotos.per_page = "18"
@@ -39,11 +36,10 @@ class PhotoServices: NSObject {
     
                         let photo = Photo(with: photoDictionary)
                         photoURLs.append(photo)
-
-                    
+ 
                     }
                     
-                    // Threard run background get info photo , after save in CoreData
+                    // Thread run background get info photo , after save in CoreData
                     DispatchQueue.global(qos: .background).async {
                         PhotoServices.getInfo(with: photoURLs as! [Photo]) { (photosInfo, error) in
                             if error == nil {
@@ -57,8 +53,6 @@ class PhotoServices: NSObject {
                             
                         }
                     }
-                    // Save gallery to CoreData
-//                    Photo.saveCoreData(with: photoArray)
                     
                     completionHandler(photos, photoURLs, nil)
                 } else {
@@ -73,17 +67,11 @@ class PhotoServices: NSObject {
                                     
                                 }
                             }
-//                            for photo in photosCoreData {
-//                                photoURLs.append(photo)
-//                            }
-//
                         }
                     
                         // Show error
                         viewController.view.makeToast("\(error.localizedDescription)")
-                        
-                        //
-//                        completionHandler(nil, photoURLs, error)
+
                     }
                 }
             })

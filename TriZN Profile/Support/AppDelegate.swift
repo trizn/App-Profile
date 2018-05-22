@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FlickrKit.shared().initialize(withAPIKey: API.KEY, sharedSecret: API.SECRET)
         
         if User.share().accessToken != nil {
-            helperFlickr.login(sender: (window?.rootViewController)!, {(error) in
-                print(error != nil ? "" : error?.localizedDescription)
+            helperFlickr.login(sender: (window?.rootViewController)!, { (error) in
+                print(error == nil ? "" : error?.localizedDescription as Any)
             })
         }
         
