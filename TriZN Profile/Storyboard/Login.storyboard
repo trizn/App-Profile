@@ -106,7 +106,7 @@
         <!--Skill-->
         <scene sceneID="yM0-i4-mpV">
             <objects>
-                <navigationController storyboardIdentifier="LoginSkill" automaticallyAdjustsScrollViewInsets="NO" id="kZc-p0-6gU" customClass="SkillNavigationController" customModule="TriZN_Profile" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="InitialLogin" automaticallyAdjustsScrollViewInsets="NO" id="kZc-p0-6gU" customClass="SkillNavigationController" customModule="TriZN_Profile" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="2" title="Skill" image="Skill" id="K4H-Fw-2Tl"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
