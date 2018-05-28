@@ -18,6 +18,8 @@ Một tay ngang bước qua mản lập trình nên ứng dụng có cấu trúc
 
 Rất mong nha tuyển dụng sẽ xem qua ứng dụng này, nếu được thì cho tôi sự góp ý hoặc một buổi nói chuyện để biết rõ hơn về bản thân cũng như ứng dụng trên.
 
+
+
 Account Login Flickr: 
  + User: trizn610@yahoo.com
  + Pass: qwer1234@
