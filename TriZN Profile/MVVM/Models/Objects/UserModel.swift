@@ -6,7 +6,7 @@
 //  Copyright © 2018 Tri ZN. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class User: NSObject {
     static private var singleton: User?
