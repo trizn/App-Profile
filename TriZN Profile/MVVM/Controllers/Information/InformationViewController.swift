@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum NibNameCell: String {
+    case InfomationTableViewCell
+    case AvatarTableViewCell
+}
 
 class InformationViewController: UIViewController {
 
@@ -39,8 +43,8 @@ class InformationViewController: UIViewController {
 
     // MARK: - Configure Subviews
     func configureSubviews() {
-        infoTableView.register(UINib(nibName: "InfomationTableViewCell", bundle: nil), forCellReuseIdentifier: String(describing: InfomationTableViewCell.self))
-        infoTableView.register(UINib(nibName: "AvatarTableViewCell", bundle: nil), forCellReuseIdentifier: String(describing: AvatarTableViewCell.self))
+        infoTableView.register(UINib(nibName: NibNameCell.InfomationTableViewCell.rawValue, bundle: nil), forCellReuseIdentifier: String(describing: InfomationTableViewCell.self))
+        infoTableView.register(UINib(nibName: NibNameCell.AvatarTableViewCell.rawValue, bundle: nil), forCellReuseIdentifier: String(describing: AvatarTableViewCell.self))
         
         infoTableView.estimatedRowHeight = 44
         infoTableView.rowHeight = UITableViewAutomaticDimension

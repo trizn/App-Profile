@@ -22,7 +22,7 @@ class MainTabBarController: UITabBarController {
         var storyboard = UIStoryboard()
         var identifier: String = ""
         
-        if(User.share().accessToken != nil) {
+        if(UserModel.share().accessToken != nil) {
             storyboard = UIStoryboard(name: "Skill", bundle: nil)
 //            identifier = "IdentifyGalleryViewController"
             identifier = "InitialSkill"

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D1997E7206E709C00B849A7 /* ConstantsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1997E6206E709C00B849A7 /* ConstantsAPI.swift */; };
-		4D1997EA206E79D100B849A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1997E9206E79D100B849A7 /* User.swift */; };
+		4D1997EA206E79D100B849A7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1997E9206E79D100B849A7 /* UserModel.swift */; };
 		4D4950322042CF810000F939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4950312042CF810000F939 /* AppDelegate.swift */; };
 		4D49503A2042CF820000F939 /* TriZN_Profile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D4950382042CF820000F939 /* TriZN_Profile.xcdatamodeld */; };
 		4D49503C2042CF820000F939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D49503B2042CF820000F939 /* Assets.xcassets */; };
@@ -16,8 +16,9 @@
 		4D4CFD5A20A2CE97002C0982 /* AboutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CFD5920A2CE97002C0982 /* AboutPageViewController.swift */; };
 		4D4CFD6320A2FC28002C0982 /* ShowAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CFD6220A2FC28002C0982 /* ShowAboutViewController.swift */; };
 		4D4CFD6620A3DD05002C0982 /* About.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4CFD6520A3DD05002C0982 /* About.plist */; };
-		4D64AE5D2083A62D00F45571 /* PaginationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64AE5C2083A62D00F45571 /* PaginationHelper.swift */; };
 		4D6A2697208C468F00E01AA2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A2696208C468F00E01AA2 /* Photo.swift */; };
+		4D7329C620BBB47500809ACB /* DataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7329C520BBB47500809ACB /* DataBinding.swift */; };
+		4D7329C820BBB5A500809ACB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7329C720BBB5A500809ACB /* UserViewModel.swift */; };
 		4D970E09206741CF0008E9F5 /* UITableView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D970E08206741CF0008E9F5 /* UITableView+Utility.swift */; };
 		4DA35ED92087299400B37851 /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA35ED82087299400B37851 /* ImagePreviewViewController.swift */; };
 		4DA4E22A206671EB0034C2FF /* AvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4E228206671EB0034C2FF /* AvatarTableViewCell.swift */; };
@@ -30,7 +31,6 @@
 		4DD1C25C20B2A4F000E10723 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD1C25B20B2A4F000E10723 /* Login.storyboard */; };
 		4DE1AAC92049935400E2A3BA /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1AAC82049935400E2A3BA /* UIImageView.swift */; };
 		4DE1AACC20499DB600E2A3BA /* ConstantsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1AACB20499DB600E2A3BA /* ConstantsApp.swift */; };
-		4DE1AACF20499E7400E2A3BA /* ScaleScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1AACE20499E7400E2A3BA /* ScaleScreenHelper.swift */; };
 		4DE6F48A2063F043008AC1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE6F4892063F043008AC1FD /* Main.storyboard */; };
 		4DE6F48C2063F093008AC1FD /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE6F48B2063F093008AC1FD /* Information.storyboard */; };
 		4DE6F48E2063F3CD008AC1FD /* Skill.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE6F48D2063F3CD008AC1FD /* Skill.storyboard */; };
@@ -53,7 +53,7 @@
 /* Begin PBXFileReference section */
 		114B8BC275C2215A814DFAAF /* Pods-TriZN Profile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriZN Profile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriZN Profile/Pods-TriZN Profile.debug.xcconfig"; sourceTree = "<group>"; };
 		4D1997E6206E709C00B849A7 /* ConstantsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAPI.swift; sourceTree = "<group>"; };
-		4D1997E9206E79D100B849A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4D1997E9206E79D100B849A7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4D49502E2042CF810000F939 /* TriZN Profile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TriZN Profile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4950312042CF810000F939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D4950392042CF820000F939 /* TriZN_Profile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TriZN_Profile.xcdatamodel; sourceTree = "<group>"; };
@@ -63,8 +63,9 @@
 		4D4CFD5920A2CE97002C0982 /* AboutPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPageViewController.swift; sourceTree = "<group>"; };
 		4D4CFD6220A2FC28002C0982 /* ShowAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAboutViewController.swift; sourceTree = "<group>"; };
 		4D4CFD6520A3DD05002C0982 /* About.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = About.plist; sourceTree = "<group>"; };
-		4D64AE5C2083A62D00F45571 /* PaginationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationHelper.swift; sourceTree = "<group>"; };
 		4D6A2696208C468F00E01AA2 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		4D7329C520BBB47500809ACB /* DataBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBinding.swift; sourceTree = "<group>"; };
+		4D7329C720BBB5A500809ACB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		4D970E08206741CF0008E9F5 /* UITableView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utility.swift"; sourceTree = "<group>"; };
 		4DA35ED82087299400B37851 /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewViewController.swift; sourceTree = "<group>"; };
 		4DA4E228206671EB0034C2FF /* AvatarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarTableViewCell.swift; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		4DD1C25B20B2A4F000E10723 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4DE1AAC82049935400E2A3BA /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		4DE1AACB20499DB600E2A3BA /* ConstantsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApp.swift; sourceTree = "<group>"; };
-		4DE1AACE20499E7400E2A3BA /* ScaleScreenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleScreenHelper.swift; sourceTree = "<group>"; };
 		4DE6F4892063F043008AC1FD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4DE6F48B2063F093008AC1FD /* Information.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
 		4DE6F48D2063F3CD008AC1FD /* Skill.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Skill.storyboard; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 				4DE1AACD20499DDC00E2A3BA /* Helpers */,
 				4DE1AACA20499D9200E2A3BA /* Constants */,
 				4DE1AAC72049930C00E2A3BA /* Extensions */,
-				4D4950462042E40D0000F939 /* MVC */,
+				4D4950462042E40D0000F939 /* MVVM */,
 				4D49503B2042CF820000F939 /* Assets.xcassets */,
 				4D49503D2042CF820000F939 /* LaunchScreen.storyboard */,
 				4DF09E1F2073BCCB00432CEB /* TriZN Profile-Bridging-Header.h */,
@@ -174,14 +174,15 @@
 			path = "TriZN Profile";
 			sourceTree = "<group>";
 		};
-		4D4950462042E40D0000F939 /* MVC */ = {
+		4D4950462042E40D0000F939 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				4D7329C420BBB3F400809ACB /* View Model */,
 				4D1997E8206E79B200B849A7 /* Models */,
 				4DB0BD02204D881700A2C6BB /* Controllers */,
 				4D4950472042E4160000F939 /* Views */,
 			);
-			path = MVC;
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 		4D4950472042E4160000F939 /* Views */ = {
@@ -226,9 +227,17 @@
 			isa = PBXGroup;
 			children = (
 				4D6A2696208C468F00E01AA2 /* Photo.swift */,
-				4D1997E9206E79D100B849A7 /* User.swift */,
+				4D1997E9206E79D100B849A7 /* UserModel.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		4D7329C420BBB3F400809ACB /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D7329C720BBB5A500809ACB /* UserViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		4DA4E227206671C00034C2FF /* AvatarTableViewCell */ = {
@@ -299,10 +308,9 @@
 		4DE1AACD20499DDC00E2A3BA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				4DE1AACE20499E7400E2A3BA /* ScaleScreenHelper.swift */,
 				4DF09E1B20722E2300432CEB /* FlickrHelper.swift */,
 				4DF09E1D20723C3300432CEB /* AlertHelper.swift */,
-				4D64AE5C2083A62D00F45571 /* PaginationHelper.swift */,
+				4D7329C520BBB47500809ACB /* DataBinding.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -515,7 +523,6 @@
 			files = (
 				4DF09E232073C51400432CEB /* LoginViewController.swift in Sources */,
 				4DA4E22A206671EB0034C2FF /* AvatarTableViewCell.swift in Sources */,
-				4D64AE5D2083A62D00F45571 /* PaginationHelper.swift in Sources */,
 				4DE1AACC20499DB600E2A3BA /* ConstantsApp.swift in Sources */,
 				4DBDE08B20988AAC00BD0E80 /* PhotosEntity+CoreDataClass.swift in Sources */,
 				4DE1AAC92049935400E2A3BA /* UIImageView.swift in Sources */,
@@ -523,11 +530,11 @@
 				4D4950322042CF810000F939 /* AppDelegate.swift in Sources */,
 				4D6A2697208C468F00E01AA2 /* Photo.swift in Sources */,
 				4DB023BB207CEF7400F0C70B /* PhotoServices.swift in Sources */,
+				4D7329C820BBB5A500809ACB /* UserViewModel.swift in Sources */,
 				4DF09E1C20722E2300432CEB /* FlickrHelper.swift in Sources */,
-				4D1997EA206E79D100B849A7 /* User.swift in Sources */,
+				4D1997EA206E79D100B849A7 /* UserModel.swift in Sources */,
 				4DF09E1E20723C3300432CEB /* AlertHelper.swift in Sources */,
 				4D970E09206741CF0008E9F5 /* UITableView+Utility.swift in Sources */,
-				4DE1AACF20499E7400E2A3BA /* ScaleScreenHelper.swift in Sources */,
 				4DE6F4922063F585008AC1FD /* InformationViewController.swift in Sources */,
 				4DF09E2C2074833100432CEB /* SkillNavigationController.swift in Sources */,
 				4D4CFD6320A2FC28002C0982 /* ShowAboutViewController.swift in Sources */,
@@ -540,6 +547,7 @@
 				4D1997E7206E709C00B849A7 /* ConstantsAPI.swift in Sources */,
 				4DA35ED92087299400B37851 /* ImagePreviewViewController.swift in Sources */,
 				4DFB93CB20A6FB0800101D2D /* AboutCell.swift in Sources */,
+				4D7329C620BBB47500809ACB /* DataBinding.swift in Sources */,
 				4DD1B3B22068A7E7001EF107 /* GalleryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

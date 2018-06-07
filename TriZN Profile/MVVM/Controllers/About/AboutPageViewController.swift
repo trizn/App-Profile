@@ -23,14 +23,7 @@ class AboutPageViewController: UIPageViewController {
         
         // Open file plist and config sub views
         configureSubviews()
-
-        
-        
-        
-        
-        
-       
-        
+ 
     }
 
     // MARK: - Private methods

@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        if User.share().accessToken != nil {
+        if UserModel.share().accessToken != nil {
             let storyboad = UIStoryboard(name: "Skill", bundle: nil)
             let galleryVC = storyboad.instantiateViewController(withIdentifier: "IdentifyGalleryViewController")
             
@@ -24,9 +24,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }

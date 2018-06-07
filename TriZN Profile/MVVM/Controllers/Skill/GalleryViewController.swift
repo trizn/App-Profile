@@ -49,16 +49,12 @@ class GalleryViewController: UIViewController {
         
         // Register Cell
         collectionView.register(UINib(nibName: "GalleryCell", bundle: nil), forCellWithReuseIdentifier: "GalleryCell")
-        
-//        if (User.share().accessToken == nil ) {
-//            popToLoginViewController()
-//            return
-//        }
+
         
         // UIImagePicker: set delegate
         imagePickerController.delegate = self
         
-        if let name = User.share().name {
+        if let name = UserModel.share().name {
             navigationItem.title = "Welcome \(name)"
         }
         
@@ -75,7 +71,7 @@ class GalleryViewController: UIViewController {
 
         // Show item logout in navagation when user authented
         DispatchQueue.main.async(execute: {
-            if User.share().accessToken != nil {
+            if UserModel.share().accessToken != nil {
                 self.configureNavigationItem()
             }
             
@@ -86,24 +82,22 @@ class GalleryViewController: UIViewController {
     private func configureNavigationItem() {
         
         // Add a item in navigation
-//        DispatchQueue.main.async(execute: {
-                if User.share().accessToken != nil {
-                    
-                    let rightButtonItem = UIBarButtonItem(image: UIImage(named: "icon_logout.png"),
-                                                          style: .plain,
-                                                          target: self,
-                                                          action: #selector(self.logOut(sender:))
-                        
-                    )
-                    
-                    let leftButtonItem = UIBarButtonItem(image: UIImage(named: "icon_gallery.png"),
-                                                         style: .plain,
-                                                         target: self,
-                                                         action: #selector(self.loadGalleryInDevice(_:)))
-                self.navigationController?.navigationBar.topItem?.rightBarButtonItem = rightButtonItem
-                self.navigationController?.navigationBar.topItem?.leftBarButtonItem = leftButtonItem
-            }
-//        })
+        if UserModel.share().accessToken != nil {
+            
+            let rightButtonItem = UIBarButtonItem(image: UIImage(named: "icon_logout.png"),
+                                                  style: .plain,
+                                                  target: self,
+                                                  action: #selector(self.logOut(sender:))
+                
+            )
+            
+            let leftButtonItem = UIBarButtonItem(image: UIImage(named: "icon_gallery.png"),
+                                                 style: .plain,
+                                                 target: self,
+                                                 action: #selector(self.loadGalleryInDevice(_:)))
+            self.navigationController?.navigationBar.topItem?.rightBarButtonItem = rightButtonItem
+            self.navigationController?.navigationBar.topItem?.leftBarButtonItem = leftButtonItem
+        }
         
     }
     
@@ -197,7 +191,7 @@ class GalleryViewController: UIViewController {
             if (FlickrKit.shared().isAuthorized) {
                 FlickrKit.shared().logout()
                 
-                User.destroy()
+                UserModel.destroy()
                 
                 self.popToLoginViewController()
             }
@@ -304,7 +298,6 @@ extension GalleryViewController: UIImagePickerControllerDelegate, UINavigationCo
             vc?.modalPresentationStyle = .overCurrentContext
             
             vc?.image = _imagePicker
-//            navigationController?.present(vc!, animated: true, completion: nil)
             picker.navigationBar.isTranslucent = false
             picker.navigationBar.tintColor = UIColor.blue
             

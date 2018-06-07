@@ -39,7 +39,6 @@ class ImagePreviewViewController: UIViewController, UIGestureRecognizerDelegate 
                 } else {
                     return
                 }
-                
             })
         } else if let image = image {
             self.activityIndicator.stopAnimating()
@@ -60,15 +59,6 @@ class ImagePreviewViewController: UIViewController, UIGestureRecognizerDelegate 
         tapGestureRecognizer.delegate = self
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(tapGestureRecognizer)
-        
-        // Add item Upload when view photo from local
-//        let rightButtonItem = UIBarButtonItem(image: UIImage(named: "icon_gallery.png"),
-//                                              style: .plain,
-//                                              target: self,
-//                                              action:nil)
-//            
-//        
-//        navigationController?.navigationItem.leftBarButtonItem = rightButtonItem
         
     }
     

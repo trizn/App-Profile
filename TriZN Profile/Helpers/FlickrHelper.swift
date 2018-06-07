@@ -19,7 +19,7 @@ class FlickrHelper {
                 (userName, userID, fullName, error) -> Void in
                 DispatchQueue.main.sync(execute: { () -> Void in
                     if error == nil {
-                        User.share().setProfileInfo(userName: userName, fullName: fullName, userId: userID)
+                        UserModel.share().setProfileInfo(userName: userName, fullName: fullName, userId: userID)
                         completionHandle(nil)
                     } else {
                         guard let message = error?.localizedDescription else {
@@ -38,7 +38,7 @@ class FlickrHelper {
         self.checkAuthOp = FlickrKit.shared().checkAuthorization {
             (userName, userID, fullName, error) in
             if error == nil {
-                User.share().setProfileInfo(userName: userName, fullName: fullName, userId: userID)
+                UserModel.share().setProfileInfo(userName: userName, fullName: fullName, userId: userID)
                 
                 completionHandle(nil)
                 
@@ -48,7 +48,7 @@ class FlickrHelper {
                 }
                 
                 if message.contains("There isn't a stored token to check. Login first.") {
-                    User.userDefaults.removeObject(forKey: User.tokenKey)
+                    UserModel.userDefaults.removeObject(forKey: UserModel.tokenKey)
                 }
                 
                 completionHandle(error)
